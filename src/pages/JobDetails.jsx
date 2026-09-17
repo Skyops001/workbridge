@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import "./JobDetails.css";
+import "./jobDetails.css";
 
 const JobDetails = () => {
     const navigate = useNavigate();
