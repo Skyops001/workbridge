@@ -1,0 +1,335 @@
+/* =========================================================
+   WORKBRIDGE APPLICANT FILTER PANEL
+========================================================= */
+
+.applicant-filter-panel {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0 0 18px;
+  border: 1px solid #e2e6ec;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(20, 30, 50, 0.045);
+  animation: applicantFilterIn 0.18s ease;
+}
+
+@keyframes applicantFilterIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   FILTER GRID
+========================================================= */
+
+.applicant-filter-grid {
+  width: 100%;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px 38px;
+  padding: 28px 28px 24px;
+}
+
+.dashboard-filter-field {
+  position: relative;
+  min-width: 0;
+}
+
+/* =========================================================
+   LABEL
+========================================================= */
+
+.dashboard-filter-field > label {
+  position: absolute;
+  top: -8px;
+  left: 12px;
+  z-index: 2;
+  padding: 0 5px;
+  background: #ffffff;
+  color: #344054;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+/* =========================================================
+   CANDIDATE SEARCH INPUT
+========================================================= */
+
+.dashboard-filter-input {
+  width: 100%;
+  height: 58px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 14px;
+  border: 1px solid #cfd6df;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #8993a3;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.dashboard-filter-input:hover {
+  border-color: #aeb9b7;
+  background: #fcfdfd;
+}
+
+.dashboard-filter-input:focus-within {
+  border-color: #1f766f;
+  box-shadow: 0 0 0 3px rgba(31, 118, 111, 0.1);
+}
+
+.dashboard-filter-input svg {
+  flex: 0 0 auto;
+  color: #718096;
+}
+
+.dashboard-filter-input input {
+  width: 100%;
+  min-width: 0;
+  height: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #344054;
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.dashboard-filter-input input::placeholder {
+  color: #98a2b3;
+}
+
+/* =========================================================
+   SEARCH INPUT CLEAR BUTTON
+========================================================= */
+
+.filter-input-clear {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+  border-radius: 6px;
+  background: #f1f4f4;
+  color: #718096;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.filter-input-clear:hover {
+  background: #e2e9e8;
+  color: #2f5e5a;
+}
+
+/* =========================================================
+   SELECT
+========================================================= */
+
+.dashboard-filter-select {
+  position: relative;
+  width: 100%;
+  height: 58px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  padding: 0 42px 0 14px;
+  border: 1px solid #cfd6df;
+  border-radius: 8px;
+  background: #ffffff;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.dashboard-filter-select:hover {
+  border-color: #aeb9b7;
+  background: #fcfdfd;
+}
+
+.dashboard-filter-select:focus-within {
+  border-color: #1f766f;
+  box-shadow: 0 0 0 3px rgba(31, 118, 111, 0.1);
+}
+
+.dashboard-filter-select select {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  appearance: none;
+  background: transparent;
+  color: #536174;
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.filter-select-chevron {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #718096;
+}
+
+/* =========================================================
+   FILTER FOOTER
+========================================================= */
+
+.applicant-filter-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 0 28px 26px;
+  border: none;
+  background: #ffffff;
+}
+
+/* =========================================================
+   APPLY BUTTON
+========================================================= */
+
+.apply-filters-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 22px;
+  border: 1px solid #1f766f;
+  border-radius: 8px;
+  background: #1f766f;
+  color: #ffffff;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 650;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(31, 118, 111, 0.18);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.apply-filters-btn:hover {
+  background: #175e58;
+  border-color: #175e58;
+  box-shadow: 0 5px 14px rgba(31, 118, 111, 0.25);
+  transform: translateY(-1px);
+}
+
+.apply-filters-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(31, 118, 111, 0.18);
+}
+
+/* =========================================================
+   CLEAR BUTTON
+========================================================= */
+
+.clear-filters-btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 18px;
+  border: 1px solid #cbd3dc;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #536174;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.clear-filters-btn:hover {
+  border-color: #9aa6b2;
+  background: #f8faf9;
+  color: #27364d;
+}
+
+/* =========================================================
+   FOCUS ACCESSIBILITY
+========================================================= */
+
+.apply-filters-btn:focus-visible,
+.clear-filters-btn:focus-visible,
+.filter-input-clear:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(31, 118, 111, 0.14);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .applicant-filter-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .applicant-filter-panel {
+    margin-bottom: 14px;
+    border-radius: 10px;
+  }
+
+  .applicant-filter-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 25px 16px 20px;
+  }
+
+  .dashboard-filter-input,
+  .dashboard-filter-select {
+    height: 54px;
+  }
+
+  .applicant-filter-footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 0 16px 18px;
+  }
+
+  .apply-filters-btn,
+  .clear-filters-btn {
+    width: 100%;
+  }
+}
