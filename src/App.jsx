@@ -14,7 +14,7 @@ import AdminPanel from "./pages/AdminPanel";
 import PostJob from "./pages/employee/PostJob/PostJob";
 
 // NEW PAGES
-import JobDetails from "./pages/JobDetails";
+import JobDetails from "./pages/jobDetails/JobDetails";
 
 function Protected({ children }) {
   const { user } = useAuth();
